@@ -1,0 +1,189 @@
+.site-footer
+    // background-color: $color-4
+    padding-top: size-pc(80,rem)
+    color: $color-text
+    .top-footer 
+        a
+            color: $color-text
+        .logo
+            width: 100%
+            display: block
+            max-width: size-pc(350, rem)
+            // margin: auto
+            margin-bottom: size-pc(40, rem)
+            @media screen and ( max-width: 991.82px )
+                margin: auto
+                margin-bottom: size-pc(40, rem)
+            
+        p 
+            margin-bottom: size-pc(40, rem)
+            font-size: size-pc(20,rem)
+            @media screen and ( max-width: 991.82px )
+                text-align: center
+                
+        .list-social 
+            display: flex
+            margin-bottom: size-pc(40, rem)
+            li 
+                margin-right: 20px
+                a
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-radius: 100%
+                    background-color: $color-text
+                    width: size-pc(50, rem)
+                    height: size-pc(50, rem)
+                    color: $color-btn
+                    &:hover 
+                        background-color: $color-title 
+                        color: #fff
+        .social-list 
+            display: grid
+            grid-template-columns: auto auto auto auto
+            width: fit-content
+            li 
+                margin-right: 10px
+                margin-bottom: 10px!important
+                a
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-radius: 100%
+                    background-color: rgba(#766c54,0.2)
+                    width: size-pc(45, rem)
+                    height: size-pc(45, rem)
+                    color: $color-primary
+                    
+                    &:hover 
+                        background-color: $color-primary
+                        color: #fff
+        .payment-list
+            display: flex
+            flex-wrap: wrap
+            gap: 15px
+            li 
+                img 
+                    height: size-pc(30, rem)
+        .link-menu 
+            @media screen and ( max-width: 767.82px )
+                margin-bottom: 20px
+            ul 
+                li 
+                    margin-bottom: 5px
+                    
+                &:not(.social-list)
+                    i 
+                        color: $color-primary
+                        width: 20px
+                    
+            h3 
+                font-size: size-pc(28,rem)
+                color: $color-title
+                font-family: $font-body
+                font-weight: $font-bold
+                margin-bottom: 15px
+                text-transform: uppercase
+                border-bottom: 1px solid $color-primary
+                padding-bottom: 10px
+                width: fit-content
+            a
+                font-size: size-pc(23, rem)
+                // font-style: italic
+                &:hover 
+                    color: $color-primary
+                
+    .bottom-footer 
+        margin-top: size-pc(70, rem)
+        border-top: 1px solid $color-primary
+        padding: size-pc(30, rem) 0
+        p 
+            margin-bottom: 0
+            font-size: size-pc(22, rem)
+            span 
+                color: $color-primary
+                font-weight: bold
+.subscribe
+    &-section 
+        background-color: #1B5067
+        padding: size-pc(100,rem) 0
+        background-image: url(../images/bg-footer.png)
+        background-repeat: no-repeat
+        background-size: size-pc(400,rem)
+        background-position: 0 size-pc(-100,rem)
+        @media screen and ( max-width: 767.82px )
+            padding: size-pc(60,rem) 0
+        .content 
+            @media screen and ( max-width: 767.82px )
+                margin-bottom: size-pc(20,rem)
+                text-align: center
+                
+            h2
+                margin-bottom: size-pc(0,rem)
+                color: #fff
+                font-size: size-pc(45,rem)
+                position: relative
+                @media screen and ( max-width: 767.82px )
+                    font-size: size-pc(40,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(35,rem)
+            p 
+                margin-bottom: 0
+                color: #fff
+    &-form 
+        .input-group 
+            display: flex
+            width: 100%
+            flex-wrap: nowrap
+            border-bottom: 1px solid #fff
+            transition: all .3s ease
+            &:has(input:focus)
+                border-color: #fff
+        input 
+            background-color: unset
+            border: unset
+            padding: size-pc(15,rem) 0
+            width: 100%
+            color: #fff
+            &::placeholder
+                color: rgba(#fff,0.6)
+            &:focus
+                outline: none
+                box-shadow: unset
+        button 
+            background: unset
+            border: unset 
+            display: flex
+            align-items: center
+            transition: all .3s ease
+            color: #fff
+            padding: 0 15px
+            i 
+                margin-left: 15px
+            &:hover 
+                background-color: #fff
+                color: $color-primary
+
+.footer-logo-top
+    border-bottom: 1px solid #1b5067
+    padding-bottom: size-pc(80,rem)
+    margin-bottom: size-pc(80,rem)
+    .logo
+        width: 100%
+        display: block
+        max-width: size-pc(250, rem)
+        // margin: auto
+        margin-bottom: size-pc(0, rem)
+        @media screen and ( max-width: 991.82px )
+            margin: auto
+            margin-bottom: size-pc(0, rem)
+    .content-title 
+        h2
+            font-size: size-pc(70,rem)
+            position: relative
+            text-transform: uppercase
+            margin-bottom: 0
+            @media screen and ( max-width: 767.82px )
+                font-size: size-pc(65,rem)
+            @media screen and ( max-width: 575.82px )
+                font-size: size-pc(50,rem)

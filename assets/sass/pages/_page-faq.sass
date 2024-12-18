@@ -1,0 +1,55 @@
+.drop-box
+    margin: auto
+    margin-top: size-pc(40,rem)
+    margin-bottom: size-pc(0,rem)
+    max-width: size-pc(1400,rem)
+    .accordion-button
+        font-weight: 900
+        text-align: center
+        // font-family: $font-body
+        font-size: size-pc(35,rem)
+        border-radius: 0
+        position: relative
+        background: unset
+        &:focus,&:active
+            box-shadow: unset
+        &::before
+            position: absolute
+            top: 100%
+            width: 0
+            content: ''
+            background-color: $color-primary
+            height: 1px 
+            left: 0%
+            transition: all 1.5s ease
+        &:not(.collapsed)
+            background-color: unset
+            color: $color-primary
+            &::before
+                width: 100%
+            &::after
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23bf9874'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
+    .accordion-item
+        border: unset
+        border-top: 1px solid $color-primary
+        border-radius: 0
+        background-color: unset
+    .accordion-body
+        ul 
+            list-style: disc
+            padding-left: 15px
+
+.faq
+    &-section 
+        position: relative
+        overflow: hidden
+        @include padding-section
+        .bg 
+            position: absolute
+            width: 50%
+            bottom: -10%
+            right: -5%
+            opacity: 0.05
+            max-width: size-pc(700,rem)
+            img 
+                max-height: size-pc(1300,rem)

@@ -1,0 +1,1069 @@
+.product 
+    &-like-section 
+        @include padding-section 
+        .content 
+            margin-bottom: size-pc(80,rem)
+            @media screen and ( max-width: 767.82px )
+                margin-bottom: size-pc(60,rem)
+    &-section 
+        @include padding-section 
+    &-card 
+        display: flex
+        width: 100%
+        row-gap: size-pc(30,rem)
+        flex-direction: column
+        &-btn-wish
+            position: absolute
+            top: 10px
+            left: 10px
+            background-color: unset 
+            border: unset 
+            box-shadow: unset 
+            outline: unset 
+            font-size: size-pc(26,rem)
+            border-radius: 100%
+            width: size-pc(50,rem)
+            z-index: 4
+            display: flex
+            justify-content: center
+            align-items: center
+            height: size-pc(50,rem)
+            background-color: rgba(#fff,0.7)
+            box-shadow: 0px 0px 0px 1px rgba(18, 19, 25, 0.12), 0px 2px 4px 0px rgba(18, 19, 25, 0.04)
+            .fas
+                color: $color-primary
+        &-status
+            position: absolute
+            top: 0
+            right: 0
+            font-size: size-pc(22,rem)
+            background-color: $color-primary
+            color: #fff
+            padding: size-pc(10,rem) size-pc(20,rem)
+            z-index: 3
+        &-img 
+            @include thumb-img(110%,cover)
+            overflow: hidden
+            &:hover 
+                .product-card-action
+                    opacity: 1
+                    visibility: visible
+            img 
+                transition: all .5s ease
+                &:first-child
+                    opacity: 1
+                    z-index: 2
+                &:last-child
+                    opacity: 0
+                    z-index: 1
+            &:hover 
+                img 
+                    &:first-child
+                        opacity: 0
+                    &:last-child
+                        opacity: 1
+        &-action 
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            display: flex
+            opacity: 0
+            visibility: hidden
+            transition: all .3s ease
+            z-index: 4
+            @media screen and ( max-width: 767.82px )
+                opacity: 1
+                visibility: visible
+            a
+                display: flex 
+                column-gap: 10px
+                align-items: center
+                justify-content: center
+                flex: 0 0 50%
+                color: #fff
+                font-size: size-pc(22,rem)
+                transition: all .3s ease
+                @media screen and ( max-width: 767.82px )
+                    font-size: size-pc(22,rem)
+                    
+                &:first-child
+                    background-color: rgba(#111,0.8)
+                    &:hover 
+                        background-color: rgba(#111,1)
+                &:last-child
+                    background-color: rgba(#1B5067,0.8)
+                    padding: size-pc(20,rem)
+                    &:hover 
+                        background-color: rgba(#1B5067,1)
+        &-content 
+            .content-top
+                display: flex
+                justify-content: space-between
+                border-bottom: 1px solid #111
+                padding-bottom: size-pc(15,rem)
+                margin-bottom: size-pc(20,rem)
+                h3 
+                    font-size: size-pc(28,rem)
+                    font-family: $font-body
+                    font-weight: $font-bold
+                    margin-bottom: 0
+                    color: $color-title
+                    a 
+                        color: #111 
+                        &:hover 
+                            color: #1B5067
+                .ct-price
+                    font-size: size-pc(28,rem)
+                    font-weight: $font-bold
+                    color: #111
+                    del 
+                        font-weight: $font-regular
+                        opacity: 0.7
+                        font-size: size-pc(24,rem)
+            .content-bot 
+                display: flex
+                justify-content: space-between
+                .cate 
+                    a 
+                        color: #111 
+                        &:hover 
+                            color: #1B5067
+                .rating
+                    .fas 
+                        color: #1B5067
+    &-filter 
+        margin-bottom: size-pc(60,rem) 
+        @media screen and ( max-width: 767.82px )
+            margin-bottom: size-pc(40,rem) 
+        &-box
+            display: flex
+            flex-wrap: wrap
+            gap: 10px
+        .select-box
+            &.color-select
+                .dropdown-menu 
+                    &.show 
+                        display: flex
+                        flex-direction: column
+                        // flex-wrap: wrap
+                        gap: size-pc(20, rem)
+                    li 
+                        flex: 0 0 100%
+                    
+            &.size-select
+                .dropdown-menu 
+                    
+                    &.show 
+                        display: flex
+                        flex-direction: row
+                        flex-wrap: wrap
+                        gap: size-pc(20, rem)
+                    li 
+                        flex: 0 0 calc(50% - size-pc(10, rem))
+        
+            .dropdown-toggle
+                border: unset
+                padding: 10px 0
+                padding-right: 16px
+                padding-left: 16px
+                border-radius: 12px
+                box-shadow: 0 0 0 1px #1213191f, 0 2px 4px #1213190a
+                background: #fff
+                gap: 8px
+                display: flex
+                align-items: center
+                appearance: none
+                font-size: size-pc(26,rem)
+                color: $color-primary
+                font-family: $font-body
+                font-weight: $font-medium
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(24,rem)
+            .dropdown-menu 
+                min-width: 200px
+                width: 100%
+                padding: size-pc(30, rem) size-pc(25, rem)
+                border-radius: 10px
+                border: 1px solid #cecece
+                row-gap: size-pc(10, rem)
+                max-height: 250px
+                overflow-y: auto
+            .checkbox-wrapper-24
+                width: 100%
+                label
+                    flex-direction: row
+                    width: 100%
+                    font-size: size-pc(23,rem)
+                    margin: 0
+                    span
+                        margin-bottom: 0
+                        margin-right: 5px
+                        width: 20px
+                        height: 20px
+                        border-radius: 5px
+                        &::before
+                            top: 8px
+                            left: 5px
+                        &::after
+                            top: 12px
+                            left: 6px
+                input[type=checkbox]:checked
+                    + label
+                        span
+                            transform: scale(1.1)
+
+        .sort-box
+            display: flex
+            align-items: center
+            column-gap: 10px
+            label 
+                font-size: size-pc(26,rem)
+                font-family: $font-body
+                font-weight: $font-medium
+                color: #1f1f1f
+                margin-bottom: size-pc(0,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(24,rem)
+            .select
+                
+                position: relative
+                
+                select 
+                    border: unset
+                    padding: 10px 0
+                    padding-right: 35px
+                    padding-left: 16px
+                    border-radius: 12px
+                    box-shadow: 0 0 0 1px #1213191f, 0 2px 4px #1213190a
+                    background: #fff
+                    gap: 8px
+                    display: flex
+                    align-items: center
+                    appearance: none
+                    font-size: size-pc(26,rem)
+                    color: $color-primary
+                    font-family: $font-body
+                    font-weight: $font-medium
+                    @media screen and ( max-width: 575.82px )
+                        font-size: size-pc(24,rem)
+                svg 
+                    position: absolute
+                    right: 12px
+                    width: 12px
+                    top: calc(50% - 4px) 
+    &-nav
+        &._center 
+            ul 
+                justify-content: center
+        ul
+            display: flex
+            margin: 0 -5px
+            margin-top: 40px
+            
+            li 
+                margin: 0 5px
+                &.active
+                    a 
+                        background-color: $color-primary
+                        color: #fff
+                        border-color: $color-primary
+
+                a
+                    width: size-pc(50,rem)
+                    height: size-pc(50,rem)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border: 1px solid $color-text
+                    font-size: size-pc(24,rem)
+                    border-radius: 8px
+                    &:hover ,&.active
+                        background-color: $color-primary
+                        color: #fff
+                        border-color: $color-primary
+    &-benefit 
+        padding: 16px
+        background-color: #FEFEFE
+        // box-shadow: 4px 20px 25px rgba(#000,0.1)
+        text-align: center
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        row-gap: 10px
+        border-radius: 10px
+        margin-bottom: 10px
+        h2 
+            font-size: size-pc(35,rem)
+            position: relative
+            color: $color-primary
+            font-family: $font-body
+            @media screen and ( max-width: 767.82px )
+                font-size: size-pc(33,rem)
+            @media screen and ( max-width: 575.82px )
+                font-size: size-pc(30,rem)
+        a 
+            color: $color-primary 
+            text-decoration: underline
+            font-weight: 500
+        .benefit-list
+            display: flex
+            column-gap: 8px
+            justify-content: center
+            align-items: flex-start
+            width: 100%
+            .product-benefit-item
+                flex: 0 0 33.333333%
+                width: 33.333333%
+                display: flex
+                flex-direction: column
+                row-gap: 8px
+                align-items: center
+                img
+                    width: 30px
+                    height: 30px
+                    object-fit: contain
+                p 
+                    font-size: 14px
+                    font-weight: 500
+    &-detail 
+        &-section
+            margin-bottom: size-pc(80,rem)
+            overflow-x: hidden
+            @media screen and ( max-width: 767.82px )
+                margin-bottom: size-pc(60,rem)
+
+            .product-sticky-js
+                margin-bottom: 30px
+                display: flex
+                column-gap: 8px
+            .row-detail
+                .pinned-element
+                    width: 50%
+                    float: left
+                    position: relative
+                    display: block
+                    height: auto
+                    margin: 0
+                    @media screen and ( max-width: 991.82px )
+                        width: 100%                        
+                    .product-sticky-js
+                        position: relative
+                        width: 100%
+                        overflow: hidden
+                .scrolling-element
+                    width: 49%
+                    float: left
+                    position: relative
+                    margin: 0
+                    @media screen and ( max-width: 991.82px )
+                        width: 100%
+            .pinned-section
+                position: relative
+                display: table !important
+                width: 100%
+                margin: 0 auto
+                max-width: 1320px
+                .pin-spacer
+                    width: 50%!important
+                
+        &-option
+            display: flex
+            flex-direction: column 
+            // flex-wrap: wrap
+            row-gap: 15px
+            margin-bottom: 10px
+            h2 
+                font-size: size-pc(34,rem)
+                position: relative
+                color: $color-text
+                font-family: $font-body
+                margin-bottom: 0
+                @media screen and ( max-width: 767.82px )
+                    font-size: size-pc(32,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(30,rem)
+            &-list 
+                display: flex
+                flex-wrap: wrap
+                gap: 10px
+            .option-item
+                width: 100%
+                flex: 0 0 calc(50% - 5px)
+                max-width: calc(50% - 5px)
+                input
+                    display: none
+                    &:checked
+                        + label 
+                            border-color: $color-primary
+                            &::after
+                                opacity: 1
+                label
+                    border: 1px solid #D3D3D3FF
+                    // padding: 16px
+                    border-radius: 0px
+                    display: flex
+                    align-items: center
+                    position: relative
+                    column-gap: 12px
+                    cursor: pointer
+                    box-shadow: 4px 20px 25px rgba(#000,0.1)
+                    .product-card
+                        background-color: #fff
+                    .product-card-content 
+                        
+                        .content-top
+                            margin-bottom: 0 
+                            border-bottom: 0
+                            padding-left: 10px
+                            padding-right: 10px
+                            h3 
+                                font-size: size-pc(24,rem)
+                            .ct-price
+                                font-size: size-pc(26,rem)
+                    &::after
+                        content: ""
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15' fill='none'%3E%3Ccircle cx='8' cy='7' r='5' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.50312 15.0062C11.647 15.0062 15.0062 11.647 15.0062 7.50312C15.0062 3.35926 11.647 0 7.50312 0C3.35926 0 0 3.35926 0 7.50312C0 11.647 3.35926 15.0062 7.50312 15.0062ZM10.8513 5.9467C11.0953 5.70262 11.0953 5.3069 10.8513 5.06282C10.6072 4.81874 10.2115 4.81874 9.96739 5.06282L6.33346 8.69674L4.98049 7.34377C4.73641 7.09969 4.34068 7.09969 4.09661 7.34377C3.85253 7.58785 3.85253 7.98357 4.09661 8.22765L5.90319 10.0342C6.14727 10.2783 6.54299 10.2783 6.78707 10.0342C6.82193 9.99938 6.85182 9.96142 6.87672 9.92125L10.8513 5.9467Z' fill='%232951B8'/%3E%3C/svg%3E")
+                        background-repeat: no-repeat
+                        background-size: contain
+                        width: 30px
+                        height: 30px
+                        border: 5px solid #fff
+                        border-radius: 50%
+                        left: 8px
+                        top: 8px
+                        position: absolute
+                        opacity: 0
+                        z-index: 3
+                    .img
+                        flex: 0 0 size-pc(110,rem)
+                        width: size-pc(110,rem)
+                        height: size-pc(90,rem)
+                        background-color: #f5f5f6
+                        img 
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
+                    .ct 
+                        display: flex
+                        flex-direction: column
+                        row-gap: 8px
+                        h3 
+                            font-size: 16px
+                            font-weight: 500
+                            margin-bottom: 0
+                        p
+                            font-weight: 600
+                            color: $color-text
+                            margin-bottom: 0
+                            del
+                                opacity: 0.6
+        &-img 
+            @include thumb-img(120%, cover)
+            border-radius: 0px
+            overflow: hidden
+            border: 2px solid transparent
+            display: block
+            img 
+                border-radius: 0px
+        &-title 
+            margin-bottom: 10px
+            h1 
+                color: $color-title
+                font-weight: 900
+                font-family: $font-title
+                margin-bottom: size-pc(0,rem)
+                font-size: size-pc(50,rem)
+                position: relative
+                @media screen and ( max-width: 767.82px )
+                    font-size: size-pc(45,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(40,rem)
+            p 
+                font-size: size-pc(24,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(22,rem)
+        &-content 
+            display: flex
+            flex-direction: column
+            // background-color: #fff
+            // background-color: #F7F8F8FF
+            // border: 10px solid #fff
+            // box-shadow: 4px 20px 25px rgba(#000,0.1)
+            // padding: 25px
+            border-radius: 0px
+            row-gap: 16px
+            margin-left: 60px
+            @media screen and ( max-width: 991.82px )
+                margin-left: 0
+                
+            @media screen and ( max-width: 767.82px )
+                padding: 15px
+        &-desc 
+            margin-bottom: 10px
+            p 
+                font-size: size-pc(24,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(22,rem)
+        &-type 
+            display: flex
+            flex-direction: column
+            row-gap: 16px
+            
+            .type-item
+                display: flex
+                align-items: center
+                font-size: size-pc(22,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(20,rem)
+                > span 
+                    flex: 0 0 size-pc(200,rem)
+                    min-width: size-pc(200,rem)
+                    color: #8D929A
+                    font-weight: 500
+                    font-size: size-pc(22,rem)
+                    @media screen and ( max-width: 575.82px )
+                        font-size: size-pc(20,rem)
+                .ct 
+                    display: flex
+                    column-gap: 8px
+                    color: $color-text
+                    .it
+                        display: flex
+                        column-gap: 8px
+                        color: $color-text
+                        font-weight: 500
+                        align-items: center
+                        > img 
+                            background-color: #F5F5F6
+                            border-radius: 5px
+                            padding: 3px 5px
+                            width: 32px
+                            height: 32px
+                            object-fit: contain
+                        &._no-img 
+                            background-color: #F5F5F6
+                            padding: 3px 5px
+                            border-radius: 5px
+        &-size 
+            margin-bottom: 10px
+            .size-title
+                display: flex
+                justify-content: space-between
+                margin-bottom: 16px
+                h2 
+                    font-size: size-pc(34,rem)
+                    position: relative
+                    color: $color-text
+                    font-family: $font-body
+                    margin-bottom: 0
+                    @media screen and ( max-width: 767.82px )
+                        font-size: size-pc(32,rem)
+                    @media screen and ( max-width: 575.82px )
+                        font-size: size-pc(30,rem)
+                a
+                    font-size: size-pc(30,rem)
+                    color: $color-primary
+                    font-weight: 500
+                    text-decoration: underline
+                    @media screen and ( max-width: 767.82px )
+                        font-size: size-pc(27,rem)
+                    @media screen and ( max-width: 575.82px )
+                        font-size: size-pc(24,rem)
+
+
+            &-input 
+                display: flex
+                gap: 8px
+                width: 100%
+                flex-wrap: wrap
+                .size-detail-item 
+                    display: flex
+                    // flex: 0 0 50px
+                    // height: 50px
+                    align-items: center
+                    justify-content: center
+                    &.disable-click
+                        pointer-events: none
+                    input 
+                        display: none
+                        &:checked
+                            + label 
+                                background-color: $color-primary
+                                color: #fff
+                                border-color: $color-primary
+                                // &::after
+                                //     opacity: 1
+                                span 
+                                    color: #fff
+                        &:disabled
+                            + label
+                                background-color: #D9D9D9FF
+                    label
+                        width: 100% 
+                        border: 1px solid #929292
+                        // padding: 16px
+                        border-radius: 5px
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+                        width: 50px
+                        height: 50px
+                        position: relative
+                        row-gap: 8px
+                        cursor: pointer
+                        // &::after
+                        //     content: ""
+                        //     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15' fill='none'%3E%3Ccircle cx='8' cy='7' r='5' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.50312 15.0062C11.647 15.0062 15.0062 11.647 15.0062 7.50312C15.0062 3.35926 11.647 0 7.50312 0C3.35926 0 0 3.35926 0 7.50312C0 11.647 3.35926 15.0062 7.50312 15.0062ZM10.8513 5.9467C11.0953 5.70262 11.0953 5.3069 10.8513 5.06282C10.6072 4.81874 10.2115 4.81874 9.96739 5.06282L6.33346 8.69674L4.98049 7.34377C4.73641 7.09969 4.34068 7.09969 4.09661 7.34377C3.85253 7.58785 3.85253 7.98357 4.09661 8.22765L5.90319 10.0342C6.14727 10.2783 6.54299 10.2783 6.78707 10.0342C6.82193 9.99938 6.85182 9.96142 6.87672 9.92125L10.8513 5.9467Z' fill='%232951B8'/%3E%3C/svg%3E")
+                        //     background-repeat: no-repeat
+                        //     background-size: contain
+                        //     width: 15px
+                        //     height: 15px
+                        //     right: 13px
+                        //     top: 13px
+                        //     position: absolute
+                        //     opacity: 0
+                        span 
+                            font-weight: 700
+                            color: $color-text
+                            font-size: 16px
+                        .price-old
+                            text-decoration: line-through
+                            font-size: 14px
+                            font-weight: 500
+                        .price-new
+                            font-size: 16px
+                            font-weight: 600
+                            color: $color-primary
+                        .price 
+                            font-weight: 600
+                            font-size: 16px
+
+    &-total-price 
+        display: flex
+        flex-direction: column
+        row-gap: 10px
+        .price-content
+            display: flex
+            justify-content: space-between
+            h2 
+                font-size: size-pc(38,rem)
+                font-weight: 900
+                color: $color-primary
+                @media screen and ( max-width: 767.82px )
+                    font-size: size-pc(35,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(30,rem)
+            h3 
+                font-size: size-pc(45,rem)
+                position: relative
+                font-weight: 900
+                color: $color-primary
+                @media screen and ( max-width: 767.82px )
+                    font-size: size-pc(43,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(40,rem)
+                .total-price-compare
+                    font-size: size-pc(30,rem)
+                    position: relative
+                    font-weight: 500
+                    color: #8D929A
+                    text-decoration-line: line-through
+                    @media screen and ( max-width: 767.82px )
+                        font-size: size-pc(28,rem)
+                    @media screen and ( max-width: 575.82px )
+                        font-size: size-pc(26,rem)
+
+        .product-button-group
+            .button-gradient
+                width: 100%
+                justify-content: center
+        .product-delivery
+            text-align: center
+            display: flex
+            align-items: center
+            justify-content: center
+            column-gap: 5px
+            margin-bottom: size-pc(30,rem)
+            @media screen and ( max-width: 767.82px )
+                margin-bottom: size-pc(20,rem)
+            &::before
+                content: ""
+                width: 10px
+                height: 10px
+                border-radius: 50%
+                background-color: #0F7305
+            p 
+                color: #0f7305
+                font-weight: 500
+                font-size: 14px
+                text-align: center
+                margin-bottom: 0
+    &-plus-detail 
+        margin-bottom: 10px
+        .plus-accordition
+            border: 1px solid $color-text
+            border-left: 0
+            border-right: 0
+            border-bottom: 0
+            // margin-bottom: size-pc(60,rem)
+            border-radius: 0px
+            .accordion
+                &-button 
+                    padding: 15px 0
+                    font-size: 20px
+                    font-weight: 500
+                    color: $color-text
+                    background-color: unset
+                    font-family: $font-body
+                    font-weight: 600
+                    &:not(.collapsed)
+                        background-color: unset
+                        box-shadow: unset
+                        color: $color-primary
+                    &:focus
+                        outline: unset 
+                        box-shadow: unset
+                &-body 
+                    padding: 0 
+                    padding-bottom: 15px
+                    font-size: size-pc(24,rem)
+                    @media screen and ( max-width: 575.82px )
+                        font-size: size-pc(22,rem)
+                    h1,h2,h3,h4,h5 
+                        font-family: $font-body
+                &-item
+                    background-color: unset
+                    border: unset
+                    border-bottom: 1px solid $color-text
+                    &:first-of-type 
+                        .accordion-button
+                            border-top-left-radius: 0px
+                            border-top-right-radius: 0px
+                    &:last-of-type 
+                        border-bottom-left-radius: 0px
+                        border-bottom-right-radius: 0px
+                        .accordion-button
+                            border-bottom-left-radius: 0px
+                            border-bottom-right-radius: 0px
+    &-item-option-list
+        display: flex
+        // flex-direction: column
+        // row-gap: 15px
+        display: none
+        gap: 10px
+        &.active
+            display: flex
+    &-slide
+        .swiper-pagination 
+            position: relative
+            bottom: unset
+            padding-top: 20px
+            &-bullet
+                border-radius: 10px
+                background-color: $color-primary
+                &-active 
+                    width: 18px
+        &-img
+            margin-bottom: 0px
+            border-radius: 0px
+            overflow: hidden
+            &-thumb 
+                padding-right: 0px
+                padding-left: 0px
+                position: relative
+                display: flex
+                width: 100%
+                flex: 0 0 104.3px
+                .product-detail-img
+                    // padding-bottom: unset
+                    // width: 100px
+                    // height: 25%
+                    border: 1px solid transparent
+                    img 
+                        padding: 3px
+                .swiper 
+                    width: 100%
+                    display: flex
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    top: 0
+                    left: 0
+                    &-wrapper 
+                        // height: auto
+                    &-slide 
+                        flex: 1
+                .swiper-slide-thumb-active
+                    .product-detail-img
+                        border: 1px solid $color-primary
+                .swiper-button
+                    &-prev,&-next 
+                        &::after
+                            font-size: 20px
+                    &-prev
+                        left: 0px
+                    &-next 
+                        right: 0px
+.price-wrapper
+    width: 100%
+    header h2 
+        font-size: 24px
+        font-weight: 600
+    
+    header p 
+        margin-top: 5px
+        font-size: 16px
+        
+    .price-input 
+        width: 100%
+        display: flex
+        margin: 0px 0 10px
+    
+    .price-input .field 
+        display: flex
+        // width: 100%
+        height: 35px
+        align-items: center
+    
+    .field 
+        input 
+            width: 100%
+            height: 100%
+            outline: none
+            font-size: 14px
+            margin-left: 0px
+            border-radius: 0
+            text-align: center
+            border: unset
+            -moz-appearance: textfield
+       
+    
+    input[type="number"]
+        &::-webkit-outer-spin-button,&::-webkit-inner-spin-button 
+            -webkit-appearance: none
+    
+    .price-input .separator 
+        width: 130px
+        display: flex
+        font-size: 14px
+        align-items: center
+        justify-content: center
+    
+    .slider 
+        height: 5px
+        position: relative
+        background: #ddd
+        border-radius: 5px
+    
+        .progress 
+            height: 100%
+            left: 25%
+            right: 25%
+            position: absolute
+            border-radius: 5px
+            background: #17a2b8
+    
+    .range-input 
+        position: relative
+    
+        input 
+            position: absolute
+            width: 100%
+            height: 5px
+            top: -5px
+            background: none
+            pointer-events: none
+            -webkit-appearance: none
+            -moz-appearance: none
+    
+    input[type="range"]
+        &::-webkit-slider-thumb 
+            height: 17px
+            width: 17px
+            border-radius: 50%
+            background: #17a2b8
+            pointer-events: auto
+            -webkit-appearance: none
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05)
+    
+        &::-moz-range-thumb 
+            height: 17px
+            width: 17px
+            border: none
+            border-radius: 50%
+            background: #17a2b8
+            pointer-events: auto
+            -moz-appearance: none
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05)
+    
+
+    /* Support */
+    .support-box 
+        top: 2rem
+        position: relative
+        bottom: 0
+        text-align: center
+        display: block
+    
+    .b-btn 
+        color: white
+        text-decoration: none
+        font-weight: bold
+    
+    .b-btn.paypal i 
+        color: blue
+    
+    .b-btn:hover 
+        text-decoration: none
+        font-weight: bold
+    
+    .b-btn i 
+        font-size: 20px
+        color: yellow
+        margin-top: 2rem
+    
+.banner
+    &-top 
+        &-menu 
+            padding: size-pc(40,rem) 0
+            @media screen and ( max-width: 767.82px )
+                padding: size-pc(40,rem) 0
+            .content 
+                h3 
+                    color: $color-primary
+                    font-weight: 500
+            .breadcrumb
+                margin-bottom: 0
+            &.__has-img
+                background-size: cover
+                background-position: center
+                min-height: 50svh
+                display: flex
+                position: relative
+                
+                    margin-bottom: 0
+                .breadcrumb-item
+                    color: #fff
+                    a
+                        color: #fff
+                    +.breadcrumb-item
+                        &::before
+                            color: #fff
+                .container 
+                    display: flex
+                    position: relative
+                    z-index: 3
+                .banner-top-title
+                    padding-top: size-pc(60,rem)
+                    margin-bottom: 15px
+                    color: #fff
+                    gap: 15px
+                    max-width: 600px
+                    h1 
+                        color: #fff
+                    h3 
+                        color: #fff
+                        font-size: size-pc(40,rem)
+                        font-weight: 500
+                        @media screen and ( max-width: 1199.82px )
+                            font-size: size-pc(38, rem)
+                        @media screen and ( max-width: 767.82px )
+                            font-size: size-pc(35, rem)
+                        @media screen and ( max-width: 575.82px )
+                            font-size: size-pc(32, rem)
+                        @media screen and ( max-width: 400.82px )
+                            font-size: size-pc(28, rem)
+                &::before
+                    content: ""
+                    background: linear-gradient(25deg, rgba(17, 40, 103, 0.6) 0.00%, rgba(17, 40, 103, 0.00) 80.43%)
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    pointer-events: none
+                    z-index: 2 
+        &-title 
+            display: flex
+            line-height: 1
+            gap: 30px
+            margin-top: size-pc(30,rem)
+            margin-bottom: size-pc(40,rem)
+            h1 
+                font-size: size-pc(60,rem)
+                margin-bottom: 0
+                line-height: 1
+                @media screen and ( max-width: 1199.82px )
+                    font-size: size-pc(55, rem)
+                @media screen and ( max-width: 767.82px )
+                    font-size: size-pc(50, rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(45, rem)
+                @media screen and ( max-width: 400.82px )
+                    font-size: size-pc(43, rem)
+            span
+                line-height: 1
+                font-size: size-pc(24,rem)
+                margin-top: 18px
+                display: block
+        &-content
+            font-size: size-pc(24, rem)
+            ul 
+                list-style: disc
+                padding-left: 25px
+                margin-bottom: 1rem
+                font-size: size-pc(28,rem)
+                @media screen and ( max-width: 991.82px )
+                    font-size: size-pc(26,rem)
+                @media screen and ( max-width: 767.82px )
+                    font-size: size-pc(24,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(22,rem)
+            h2
+                color: $color-title
+                font-weight: $font-medium
+                font-family: $font-title
+                margin-bottom: size-pc(30,rem)
+                font-size: size-pc(54,rem)
+                position: relative
+                @media screen and ( max-width: 767.82px )
+                    font-size: size-pc(50,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(45,rem)
+            p,address
+                font-size: size-pc(28,rem)
+                @media screen and ( max-width: 991.82px )
+                    font-size: size-pc(26,rem)
+                @media screen and ( max-width: 767.82px )
+                    font-size: size-pc(24,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(22,rem)
+            .text-small
+                font-size: size-pc(24,rem)
+                @media screen and ( max-width: 991.82px )
+                    font-size: size-pc(23,rem)
+                @media screen and ( max-width: 767.82px )
+                    font-size: size-pc(22,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(20,rem)
+            b,strong
+                font-weight: 600
+            h3 
+                font-size: size-pc(40,rem)
+                font-family: $font-title
+                font-weight: $font-regular
+                color: $color-title
+                margin-bottom: size-pc(15,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(32,rem)
+            h4 
+                font-size: size-pc(30,rem)
+                font-family: $font-body
+                font-weight: $font-medium
+                color: $color-sub
+                margin-bottom: size-pc(15,rem)
+                @media screen and ( max-width: 575.82px )
+                    font-size: size-pc(25,rem)
