@@ -55,30 +55,7 @@
                                             <p>Free Returns & Free Shipping on Orders over $50</p>
                                         </div>
                                     </div>
-                                    <!-- <div class="col-12 col-lg-auto">
-                                        <div class="site-header-top-right">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="far fa-user"></i>
-                                                        
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <i class="far fa-heart"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="btn-icon cart-btn" href="javascript:;">
-                                                        <i class="far fa-cart-shopping"></i>
-                                                        <span>2</span>
-                                                    </a>
-                                                </li>
-                                                
-                                            </ul>
-                                        </div>
-                                    </div> -->
+                                    
                                 </div>
                             </div>
                         </div>
@@ -195,7 +172,7 @@
                                 <div class="site-header-menu-action">
                                     <a href="#">
                                         <i class="far fa-user"></i>
-                                        <!-- <img src="assets/images/user.svg" alt=""> -->
+                                        
                                     </a>
                                     <a href="">
                                         <i class="far fa-heart"></i>
@@ -509,27 +486,27 @@
                   const productId = this.getAttribute('data-product-id');
                   const icon = this.querySelector('i');
           
-                  // Simulate toggling between adding/removing from wishlist
+                
                   if (icon.classList.contains('fal')) {
                     icon.classList.remove('fal');
                     icon.classList.add('fas');
-                    addToWishlist(productId);  // Call function to add to wishlist
+                    addToWishlist(productId);  
                   } else {
                     icon.classList.remove('fas');
                     icon.classList.add('fal');
-                    removeFromWishlist(productId);  // Call function to remove from wishlist
+                    removeFromWishlist(productId); 
                   }
                 });
               });
           
               function addToWishlist(productId) {
                 console.log('Added product ' + productId + ' to wishlist');
-                // Your code to handle adding to wishlist (e.g., AJAX request)
+                
               }
           
               function removeFromWishlist(productId) {
                 console.log('Removed product ' + productId + ' from wishlist');
-                // Your code to handle removing from wishlist (e.g., AJAX request)
+                
               }
             });
           </script>
